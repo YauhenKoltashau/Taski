@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import {Button} from "./Button";
+import {Button} from "./button";
 
-import styles from './Counter.module.css'
+import styles from './counter.module.css'
 
 
 export const Counter = () => {
@@ -27,6 +27,7 @@ export const Counter = () => {
                 callBack={resetCounter}
                 name={"RESET"}/>
             {counter===5&&<span className={styles.error}>Maximum is made. Try reset</span>}
+            {counter===0&&<span className={styles.error}>Try to press ADD</span>}
 
         </div>
     )

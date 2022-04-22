@@ -8,7 +8,7 @@ export const Counter = () => {
     let [counter, setCounter] = useState(0)
 
     const upCounter = () => {
-        if (counter < 10) {
+        if (counter < 5) {
             setCounter(counter + 1)
         }
     }
@@ -19,7 +19,7 @@ export const Counter = () => {
         <div className={styles.counterBack}>
             <div className={styles.counter}><b>{counter}</b></div>
             <Button
-                className={counter < 10 ? styles.up : styles.disabledUp}
+                className={counter < 5 ? styles.up : styles.disabledUp}
                 callBack={upCounter}
                 name={"ADD"}/>
             <Button
